@@ -1,0 +1,66 @@
+//===================================//
+|Operating Systems Project #1: Linker |
+|Prof. Mohamed Zahran                 |
+|                                     |
+|Student Name: Yaxing Chen            |
+|NID: 16929794                        |
+//===================================//
+
+
+//===========Requirements================//
+JRE 6
+
+
+//===========Things in .zip===============//
+1. Runnable Jar: proj_linker_YaxingChen.jar
+2. Source code: ./src
+3. Sample input files: input-1, input-2, input-2, input-4
+4. Sample output file: output
+5. read_me doc
+
+
+//=Run the program in command line (Linux)=//
+1. unzip os-linker-YaxingChen-N16929794.zip
+2. cd os-linker-YaxingChen-N6929794
+3. java -jar proj_linker_YaxingChen.jar input-1 ouput (please refer to following introduction section for details about input/output))
+
+
+//===========Brief introduction===========//
+1. Using JAVA
+
+2. Input will read from certain file, output (except errors & warnings) will be written to certain file
+
+3. Capable of input format error tolerance. No limitation on spaces or extra lines among keywords
+
+4. Errors & warnings will be printed in command line console
+
+5. When errors occurred, memory map & symbol table will not be printed (output file will not be created), only errors and warnings will be printed in console
+
+6. When running with command line, input & output file can be designated, otherwise default file names will be used.
+
+7. Default input & output file:
+    ./input
+    ./output
+
+8. Outputs (mem map & symbol table) are written into a output buffer, and will be flushed once the program is finished.
+
+9. Error & warnings will be printed immediately when occurred. In the mean time, they will be written to a buffer for temporary storage, but will not be flushed into output file at the end of the program
+
+11. Using Hashmap for symbol table and used list (checking used situation) to guarantee the searching efficiency, while using arrayList to guarantee the output sequence.
+
+12. Simple work flow: 
+
+  1st pass
+     |
+     | 1st pass product: symbol table, module initial addresses
+     |
+     V
+  2nd pass
+     |
+     | 2nd pass product: memory map  
+     |
+     V
+   output
+
+
+
